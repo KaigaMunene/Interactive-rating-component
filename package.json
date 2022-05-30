@@ -1,0 +1,23 @@
+{
+  "name": "interactive-rating-component",
+  "version": "1.0.0",
+  "description": "a simple rating page",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaigaMunene/Interactive-rating-component.git"
+  },
+  "author": "Kaiga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaigaMunene/Interactive-rating-component/issues"
+  },
+  "homepage": "https://github.com/KaigaMunene/Interactive-rating-component#readme",
+  "devDependencies": {
+    "sass": "^1.52.1"
+  }
+}
