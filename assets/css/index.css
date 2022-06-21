@@ -19,9 +19,11 @@ body {
 }
 
 .content {
-  width: 25rem;
-  height: 22rem;
+  width: 100%;
+  max-width: 25rem;
+  min-height: 22rem;
   padding: 1rem;
+  margin: 1rem;
   background-color: hsl(213deg, 19%, 18%);
   border-radius: 0.5rem;
 }
@@ -53,201 +55,135 @@ p {
   padding: 0.5rem;
   width: 100%;
 }
-.form .star-rating {
+
+.rating-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
-.form .radio-one-input {
-  display: none;
-}
-.form .label-1 {
-  display: block;
-  cursor: pointer;
-  margin-right: 3.5rem;
-  margin-bottom: 3.2;
-}
-.form .label-1 .one {
-  border-radius: 100%;
+
+.rating {
+  position: relative;
   height: 3rem;
   width: 3rem;
-  background-color: hsl(213deg, 18%, 24%);
-  position: absolute;
-  transition: background-color 0.2s;
-}
-.form .label-1 .one::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background-color: hsl(216deg, 12%, 54%);
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.form .label-1 div {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50% -50%);
-  font-size: 1rem;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 400;
-  z-index: 1;
-}
-.form .label-1 .one:hover {
-  background-color: hsl(25deg, 97%, 53%);
-}
-.form .label-1 .radio-one-input:checked ~ .label-1 .one::after {
-  opacity: 1;
+  margin: 0.5rem;
 }
 
-.btn {
-  text-align: center;
+.radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
-.btn #btn {
+
+.radio-input:checked ~ .label-1 {
+  background-color: hsl(25deg, 97%, 53%);
+}
+
+.radio-input:hover ~ .label-1 {
+  background-color: hsl(25deg, 97%, 53%);
+}
+
+.rating-label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: hsl(213deg, 18%, 24%);
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-label:hover {
+  background-color: hsl(25deg, 97%, 53%);
+}
+.rating-label span {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  width: 100%;
+}
+.btn-container .btn {
+  width: 100%;
+  max-width: 20rem;
   background-color: hsl(25deg, 97%, 53%);
   border: none;
   border-radius: 1rem;
   color: hsl(0deg, 0%, 100%);
-  padding: 0.5rem 6rem;
+  padding: 0.8rem 1rem;
   margin: 1rem;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
   cursor: pointer;
 }
-.btn #btn:hover {
+.btn-container .btn:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(25deg, 97%, 53%);
 }
 
-@media only screen and (max-width: 414px) {
-  body {
-    background-color: hsl(216deg, 12%, 8%);
-    font-family: "Overpass", sans-serif;
-  }
+.thank-you-content {
+  width: 100%;
+  max-width: 26rem;
+  min-height: 22rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 0.5rem;
+}
 
-  .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    padding: 1.5rem;
-  }
+.thank-you-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.thank-you-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 10rem;
+}
 
-  .content {
-    width: 25rem;
-    height: 22rem;
-    padding: 1rem;
-    background-color: hsl(213deg, 19%, 18%);
-    border-radius: 0.5rem;
-  }
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rate .the-rating {
+  background-color: hsl(213deg, 18%, 24%);
+  border-radius: 1rem;
+  color: hsl(25deg, 97%, 53%);
+}
 
-  .icon {
-    background-color: hsl(213deg, 18%, 24%);
-    border-radius: 50%;
-    vertical-align: middle;
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 1rem;
-    margin: 0.5rem;
-  }
+.thank-you-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
 
-  h1 {
-    font-weight: 700;
-    padding: 0.5rem;
-    color: hsl(0deg, 0%, 100%);
-  }
-
-  p {
-    font-weight: 400;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: hsl(217deg, 12%, 63%);
-  }
-
-  .form {
-    padding: 0.5rem;
-    width: 100%;
-  }
-  .form .star-rating {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .form .radio-one-input {
-    display: none;
-  }
-  .form .label-1 {
-    display: block;
-    cursor: pointer;
-    margin-right: 3.5rem;
-    margin-bottom: 3.2;
-  }
-  .form .label-1 .one {
-    border-radius: 100%;
-    height: 3rem;
-    width: 3rem;
-    background-color: hsl(213deg, 18%, 24%);
-    position: absolute;
-    transition: background-color 0.2s;
-  }
-  .form .label-1 .one::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: hsl(216deg, 12%, 54%);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .form .label-1 div {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50% -50%);
-    font-size: 1rem;
-    color: hsl(0deg, 0%, 100%);
-    font-weight: 400;
-    z-index: 1;
-  }
-  .form .label-1 .one:hover {
-    background-color: hsl(25deg, 97%, 53%);
-  }
-  .form .label-1 .radio-one-input:checked ~ .label-1 .one::after {
-    opacity: 1;
-  }
-
-  .btn {
-    text-align: center;
-  }
-  .btn #btn {
-    background-color: hsl(25deg, 97%, 53%);
-    border: none;
-    border-radius: 1rem;
-    color: hsl(0deg, 0%, 100%);
-    padding: 0.5rem 6rem;
-    margin: 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  .btn #btn:hover {
-    background-color: hsl(0deg, 0%, 100%);
-    color: hsl(25deg, 97%, 53%);
-  }
+.thank-you-text {
+  text-align: center;
+  font-weight: 400;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: hsl(217deg, 12%, 63%);
 }
 
 /*# sourceMappingURL=index.css.map */

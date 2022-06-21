@@ -1,11 +1,4 @@
-$myFont: "Overpass", sans-serif;
-$primaryColor: hsl(25, 97%, 53%);
-$whiteColor: hsl(0, 0%, 100%);
-$lightGrey: hsl(217, 12%, 63%);
-$mediumGrey: hsl(216, 12%, 54%);
-$darkBlue: hsl(213, 19%, 18%);
-$veryDarkBlue: hsl(216, 12%, 8%);
-$paragraphFontSize: 1rem;
+@use "abstracts/variables";
 
 * {
   margin: 0;
@@ -14,9 +7,10 @@ $paragraphFontSize: 1rem;
 }
 
 body {
-  background-color: $veryDarkBlue;
-  font-family: $myFont;
+  background-color: variables.$very-dark-blue;
+  font-family: variables.$my-font;
 }
+
 .main {
   display: flex;
   align-items: center;
@@ -26,10 +20,12 @@ body {
   padding: 1.5rem;
 }
 .content {
-  width: 25rem;
-  height: 22rem;
+  width: 100%;
+  max-width: 25rem;
+  min-height: 22rem;
   padding: 1rem;
-  background-color: $darkBlue;
+  margin: 1rem;
+  background-color: variables.$dark-blue;
   border-radius: 0.5rem;
 }
 .icon {
@@ -41,209 +37,151 @@ body {
   padding: 1rem;
   margin: 0.5rem;
 }
+
 h1 {
   font-weight: 700;
   padding: 0.5rem;
-  color: $whiteColor;
+  color: variables.$white-color;
 }
+
 p {
   font-weight: 400;
   padding: 0.5rem;
-  font-size: $paragraphFontSize;
-  color: $lightGrey;
+  font-size: variables.$paragraph-font-size;
+  color: variables.$light-grey;
 }
+
 .form {
   padding: 0.5rem;
   width: 100%;
-  .star-rating {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+}
+
+.rating-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.rating {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+.radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-input:checked ~ .label-1 {
+  background-color: variables.$primary-color;
+}
+
+.radio-input:hover ~ .label-1 {
+  background-color: variables.$primary-color;
+}
+
+.rating-label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: hsl(213, 18%, 24%);
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: variables.$primary-color;
   }
-  .radio-one-input {
-    display: none;
-  }
-  .label-1 {
-    display: block;
-    cursor: pointer;
-    margin-right: 3.5rem;
-    margin-bottom: 3.2;
-    .one {
-      border-radius: 100%;
-      height: 3rem;
-      width: 3rem;
-      background-color: hsl(213, 18%, 24%);
-      position: absolute;
-      transition: background-color 0.2s;
-    }
-    .one::after {
-      content: "";
-      height: 100%;
-      width: 100%;
-      border-radius: 100%;
-      position: relative;
-      top: 0;
-      left: 0;
-      background-color: $mediumGrey;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    div {
-      position: absolute;
-      top: 40%;
-      left: 40%;
-      transform: translate(-50% -50%);
-      font-size: 1rem;
-      color: $whiteColor;
-      font-weight: 400;
-      z-index: 1;
-    }
-    .one:hover {
-      background-color: $primaryColor;
-    }
-    .radio-one-input:checked ~ .label-1 .one::after {
-      opacity: 1;
-    }
+  span {
+    color: white;
+    margin: 0;
+    padding: 0;
   }
 }
 
-.btn {
-  text-align: center;
-  #btn {
-    background-color: $primaryColor;
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  width: 100%;
+  .btn {
+    width: 100%;
+    max-width: 20rem;
+    background-color: variables.$primary-color;
     border: none;
     border-radius: 1rem;
-    color: $whiteColor;
-    padding: 0.5rem 6rem;
+    color: variables.$white-color;
+    padding: 0.8rem 1rem;
     margin: 1rem;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: $paragraphFontSize;
+    font-size: variables.$paragraph-font-size;
     cursor: pointer;
-  }
-  #btn:hover {
-    background-color: $whiteColor;
-    color: $primaryColor;
+    &:hover {
+      background-color: variables.$white-color;
+      color: variables.$primary-color;
+    }
   }
 }
 
+.thank-you-content {
+  width: 100%;
+  max-width: 26rem;
+  min-height: 22rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: variables.$dark-blue;
+  border-radius: 0.5rem;
+}
 
-@media only screen and (max-width: 414px) {
-  body {
-    background-color: $veryDarkBlue;
-    font-family: $myFont;
-  }
-  .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.thank-you-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  img {
     width: 100%;
-    height: 100vh;
-    padding: 1.5rem;
+    height: 100%;
+    max-width: 10rem;
   }
-  .content {
-    width: 25rem;
-    height: 22rem;
-    padding: 1rem;
-    background-color: $darkBlue;
-    border-radius: 0.5rem;
-  }
-  .icon {
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .the-rating {
     background-color: hsl(213, 18%, 24%);
-    border-radius: 50%;
-    vertical-align: middle;
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 1rem;
-    margin: 0.5rem;
+    border-radius: 1rem;
+    color: variables.$primary-color;
   }
-  h1 {
-    font-weight: 700;
-    padding: 0.5rem;
-    color: $whiteColor;
-  }
-  p {
-    font-weight: 400;
-    padding: 0.5rem;
-    font-size: $paragraphFontSize;
-    color: $lightGrey;
-  }
-  .form {
-    padding: 0.5rem;
-    width: 100%;
-    .star-rating {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .radio-one-input {
-      display: none;
-    }
-    .label-1 {
-      display: block;
-      cursor: pointer;
-      margin-right: 3.5rem;
-      margin-bottom: 3.2;
-      .one {
-        border-radius: 100%;
-        height: 3rem;
-        width: 3rem;
-        background-color: hsl(213, 18%, 24%);
-        position: absolute;
-        transition: background-color 0.2s;
-      }
-      .one::after {
-        content: "";
-        height: 100%;
-        width: 100%;
-        border-radius: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-        background-color: $mediumGrey;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-      div {
-        position: absolute;
-        top: 40%;
-        left: 40%;
-        transform: translate(-50% -50%);
-        font-size: 1rem;
-        color: $whiteColor;
-        font-weight: 400;
-        z-index: 1;
-      }
-      .one:hover {
-        background-color: $primaryColor;
-      }
-      .radio-one-input:checked ~ .label-1 .one::after {
-        opacity: 1;
-      }
-    }
-  }
+}
 
-  .btn {
-    text-align: center;
-    #btn {
-      background-color: $primaryColor;
-      border: none;
-      border-radius: 1rem;
-      color: $whiteColor;
-      padding: 0.5rem 6rem;
-      margin: 1rem;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: $paragraphFontSize;
-      cursor: pointer;
-    }
-    #btn:hover {
-      background-color: $whiteColor;
-      color: $primaryColor;
-    }
-  }
+.thank-you-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 1rem;
+  color: variables.$white-color;
+}
+
+.thank-you-text {
+  text-align: center;
+  font-weight: 400;
+  padding: 0.5rem;
+  font-size: variables.$paragraph-font-size;
+  color: variables.$light-grey;
 }
