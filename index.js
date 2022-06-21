@@ -21,7 +21,7 @@ function renderThankYouContent (container, ratingValue) {
   container.innerHTML = `
   <div class="thank-you-content">
   <div class="thank-you-img">
-      <img src="./Images/illustration-thank-you.svg" alt="thank-you" class="thanks-img">
+      <img src="./images/illustration-thank-you.svg" alt="thank-you" class="thanks-img">
   </div>
   <div class="rate">
       <p class="the-rating">You have selected ${ratingValue} out of 5</p>

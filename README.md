@@ -27,8 +27,10 @@ Users should be able to:
 ### Screenshot
 
 ### Links
+- Solution URL: [Github](https://github.com/KaigaMunene/Interactive-rating-component)
+- Live Site URL: [Netlify](https://qr-code-component-page.netlify.app)
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
+## My process
 ## Author
+- Frontend Mentor - [@KaigaMunene](https://www.frontendmentor.io/profile/KaigaMunene)
+- Twitter - [@kaiga_treymylo](https://twitter.com/kaiga_treymylo)

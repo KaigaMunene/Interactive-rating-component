@@ -25,15 +25,15 @@ body {
   padding: 1rem;
   margin: 1rem;
   background-color: hsl(213deg, 19%, 18%);
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .icon {
   background-color: hsl(213deg, 18%, 24%);
   border-radius: 50%;
   vertical-align: middle;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -61,7 +61,6 @@ p {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
 
 .rating {
@@ -79,11 +78,11 @@ p {
   cursor: pointer;
 }
 
-.radio-input:checked ~ .label-1 {
-  background-color: hsl(25deg, 97%, 53%);
+.radio-input:checked ~ .rating-label {
+  background-color: hsl(216deg, 12%, 54%);
 }
 
-.radio-input:hover ~ .label-1 {
+.radio-input:hover ~ .rating-label {
   background-color: hsl(25deg, 97%, 53%);
 }
 
@@ -99,13 +98,12 @@ p {
   align-items: center;
   justify-content: center;
 }
-.rating-label:hover {
-  background-color: hsl(25deg, 97%, 53%);
-}
 .rating-label span {
-  color: white;
-  margin: 0;
-  padding: 0;
+  color: hsl(217deg, 12%, 63%);
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 .btn-container {
@@ -141,7 +139,7 @@ p {
   padding: 1rem;
   margin: 1rem;
   background-color: hsl(213deg, 19%, 18%);
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .thank-you-img {

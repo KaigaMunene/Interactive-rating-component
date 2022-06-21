@@ -26,14 +26,14 @@ body {
   padding: 1rem;
   margin: 1rem;
   background-color: variables.$dark-blue;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 .icon {
   background-color: hsl(213, 18%, 24%);
   border-radius: 50%;
   vertical-align: middle;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -61,7 +61,6 @@ p {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
 
 .rating {
@@ -79,11 +78,11 @@ p {
   cursor: pointer;
 }
 
-.radio-input:checked ~ .label-1 {
-  background-color: variables.$primary-color;
+.radio-input:checked ~ .rating-label {
+  background-color: variables.$medium-grey;
 }
 
-.radio-input:hover ~ .label-1 {
+.radio-input:hover ~ .rating-label {
   background-color: variables.$primary-color;
 }
 
@@ -98,13 +97,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover {
-    background-color: variables.$primary-color;
-  }
   span {
-    color: white;
-    margin: 0;
-    padding: 0;
+    color: variables.$light-grey;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    margin: 0.5rem;
   }
 }
 
@@ -141,7 +139,7 @@ p {
   padding: 1rem;
   margin: 1rem;
   background-color: variables.$dark-blue;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .thank-you-img {
