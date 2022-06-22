@@ -31,6 +31,7 @@ versions.json
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
+.Zone:identifier
 
 # Docs site
 _site
