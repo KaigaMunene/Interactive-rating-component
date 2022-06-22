@@ -52,6 +52,8 @@ Users should be able to:
 ```
 npm run sass-prod
 ```
+- Install [eslint](https://www.npmjs.com/package/eslint) - is an open-source Javascript linting utility that helps you write better JavaScript.
+- Install [prettier](https://www.npmjs.com/package/prettier) - is a tool to format JavaScript code.
 
 ## Author
 - Frontend Mentor - [@KaigaMunene](https://www.frontendmentor.io/profile/KaigaMunene)

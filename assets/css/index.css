@@ -1,1 +1,214 @@
-*{margin:0;padding:0;box-sizing:border-box}body{background-color:#121417;font-family:"Overpass",sans-serif}.main{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;padding:1.5rem}.content{width:100%;max-width:25rem;min-height:22rem;padding:1rem;margin:1rem;background-color:#252d37;border-radius:1.5rem}.icon{background-color:#323c48;border-radius:50%;vertical-align:middle;width:3rem;height:3rem;padding:1rem;margin:.5rem}h1{font-weight:700;padding:.5rem;color:#fff}p{font-weight:400;padding:.5rem;font-size:1rem;color:#959eac}.form{padding:.5rem;width:100%}.rating-card{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}.rating{position:relative;height:3rem;width:3rem;margin:.5rem}.radio-input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.radio-input:checked~.rating-label{background-color:#7c8798}.radio-input:hover~.rating-label{background-color:#fb7413}.rating-label{display:block;cursor:pointer;width:100%;height:100%;border-radius:100%;background-color:#323c48;transition:background-color .2s;display:flex;align-items:center;justify-content:center}.rating-label span{color:#959eac;width:3rem;height:3rem;padding:1rem;margin:.5rem}.btn-container{display:flex;align-items:center;justify-content:center;padding:1.2rem;width:100%}.btn-container .btn{width:100%;max-width:20rem;background-color:#fb7413;border:none;border-radius:1rem;color:#fff;padding:.8rem 1rem;margin:1rem;text-decoration:none;display:inline-block;font-size:1rem;cursor:pointer}.btn-container .btn:hover{background-color:#fff;color:#fb7413}.thank-you-content{width:100%;max-width:26rem;min-height:22rem;padding:1rem;margin:1rem;background-color:#252d37;border-radius:1.5rem}.thank-you-img{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:1.5rem}.thank-you-img img{width:100%;height:100%;max-width:10rem}.rate{display:flex;align-items:center;justify-content:center}.rate .the-rating{background-color:#323c48;border-radius:1rem;color:#fb7413}.thank-you-title{display:flex;align-items:center;justify-content:center;font-weight:700;padding:1rem;color:#fff}.thank-you-text{text-align:center;font-weight:400;padding:.5rem;font-size:1rem;color:#959eac}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216deg, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0.5rem;
+}
+@media (min-width: 400px) {
+  .main {
+    padding: 1rem;
+  }
+}
+@media (min-width: 500px) {
+  .main {
+    padding: 1.5rem;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 25rem;
+  min-height: 22rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 1.5rem;
+}
+@media (min-width: 400px) {
+  .content {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.icon {
+  background-color: hsl(213deg, 18%, 24%);
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+h1 {
+  font-weight: 700;
+  padding: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+p {
+  font-weight: 400;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: hsl(217deg, 12%, 63%);
+}
+
+.form {
+  padding: 0.25rem;
+  width: 100%;
+}
+@media (min-width: 400px) {
+  .form {
+    padding: 0.5rem;
+  }
+}
+
+.rating-card {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.2rem;
+}
+@media (min-width: 400px) {
+  .rating {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-input:checked ~ .rating-label {
+  background-color: hsl(216deg, 12%, 54%);
+}
+
+.radio-input:hover ~ .rating-label {
+  background-color: hsl(25deg, 97%, 53%);
+}
+
+.rating-label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: hsl(213deg, 18%, 24%);
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-label span {
+  color: hsl(217deg, 12%, 63%);
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  width: 100%;
+}
+.btn-container .btn {
+  width: 100%;
+  max-width: 20rem;
+  background-color: hsl(25deg, 97%, 53%);
+  border: none;
+  border-radius: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.8rem 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-container .btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+
+.thank-you-content {
+  width: 100%;
+  max-width: 26rem;
+  min-height: 22rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 1.5rem;
+}
+
+.thank-you-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.thank-you-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 10rem;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rate .the-rating {
+  background-color: hsl(213deg, 18%, 24%);
+  border-radius: 1rem;
+  color: hsl(25deg, 97%, 53%);
+}
+
+.thank-you-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.thank-you-text {
+  text-align: center;
+  font-weight: 400;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: hsl(217deg, 12%, 63%);
+}
+
+/*# sourceMappingURL=index.css.map */
